@@ -1,0 +1,47 @@
+<div id="zona-comentarios" style="max-width: 800px; margin: 50px auto; padding: 20px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background: #fff;">
+        
+    <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #e6e6e6; padding-bottom: 15px; margin-bottom: 20px;">
+        <h3 style="margin: 0; font-size: 1.3em; color: #2a2e2e; font-weight: bold;">{{ comentarios.length }} comentarios</h3>
+        <div style="color: #a5b2b9; font-weight: bold;">
+            <span style="color: #f0ad4e;">★</span> Destacados
+        </div>
+    </div>
+
+    <div *ngIf="isLoggedIn; else bloqueLogin" style="display: flex; gap: 15px; margin-bottom: 30px;">
+        <img [src]="'https://ui-avatars.com/api/?name=' + nombreUsuario + '&background=random&color=fff'" alt="Avatar" style="width: 48px; height: 48px; border-radius: 4px; object-fit: cover;">
+        
+        <div style="flex: 1; display: flex; flex-direction: column; gap: 10px;">
+            <textarea name="texto_comentario" [(ngModel)]="nuevoComentario" placeholder="Deja tu comentario..." required style="width: 100%; padding: 12px; border: 2px solid #dbdbdb; border-radius: 4px; resize: vertical; min-height: 60px; font-family: inherit; font-size: 1.05em; color: #333; outline: none;"></textarea>
+            <button (click)="enviarComentario()" style="align-self: flex-end; background: #2e9fff; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 0.9em;">Publicar</button>
+        </div>
+    </div>
+
+    <ng-template #bloqueLogin>
+         <div style="display: flex; gap: 15px; margin-bottom: 30px; align-items: flex-start;">
+             <div style="width: 48px; height: 48px; background: #e6e6e6; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: #999; font-size: 1.5em;">👤</div>
+             <div style="flex: 1; border: 2px solid #dbdbdb; padding: 15px; border-radius: 4px; display: flex; justify-content: space-between; align-items: center; background: #fbfbfb;">
+                <span style="color: #7f8d99; font-size: 1.05em;">Debes iniciar sesión para participar...</span>
+                <button (click)="irAlLogin()" style="background: #2e9fff; color: white; text-decoration: none; padding: 10px 20px; border-radius: 4px; font-weight: bold; font-size: 0.9em; border: none; cursor: pointer;">Log in</button>
+             </div>
+         </div>
+    </ng-template>
+
+    <div style="border-bottom: 2px solid #e6e6e6; margin-bottom: 20px;"></div>
+
+    <div class="lista-comentarios">
+        <div *ngIf="comentarios.length === 0" style="color: #7f8d99; text-align: center; margin-top: 30px;">
+            No hay comentarios todavía. ¡Sé el primero!
+        </div>
+
+        <div *ngFor="let com of comentarios" style="display: flex; gap: 15px; margin-bottom: 25px;">
+            <img [src]="'https://ui-avatars.com/api/?name=' + com.nombre_autor + '&background=random&color=fff'" style="width: 48px; height: 48px; border-radius: 4px; object-fit: cover;">
+            <div style="flex: 1;">
+                <div style="margin-bottom: 6px;">
+                    <strong style="color: #2e9fff; font-size: 1em; cursor: pointer;">{{ com.nombre_autor }}</strong>
+                    <span style="color: #7f8d99; font-size: 0.85em; margin-left: 6px;">• {{ com.fecha_creacion | date:'mediumDate' }}</span>
+                </div>
+                <p style="margin: 0 0 10px 0; line-height: 1.5; color: #444; font-size: 1.05em;">{{ com.comentario }}</p>
+            </div>
+        </div>
+    </div>
+</div>

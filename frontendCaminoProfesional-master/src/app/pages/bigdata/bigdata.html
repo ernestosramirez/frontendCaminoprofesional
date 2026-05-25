@@ -1,0 +1,69 @@
+<app-header />
+
+<div class="elementosprincipales">
+  <section class="hero">
+    <video autoplay muted loop playsinline class="video-fondo">
+      <source src="videosPaginas/videoBigData.mp4" type="video/mp4">
+    </video>
+    <div class="hero-content">
+      <h1>BIG DATA</h1>
+      <p>
+        La especialización en Big Data enseña a gestionar, procesar y extraer valor de volúmenes masivos de datos.<br>
+        Domina la <strong>arquitectura de datos, análisis predictivo y visualización avanzada</strong>.
+      </p>
+      <a href="#contenidoBD" class="btn-hero">Explorar contenidos</a>
+    </div>
+  </section>
+
+  <div class="contenidoGrados" id="contenidoBD">
+    <h2>Especialización en Big Data y Análisis</h2>
+    <p>
+      Este curso avanzado está dirigido a profesionales que deseen transformar datos brutos
+      en información estratégica mediante tecnologías de procesamiento masivo.
+    </p>
+
+    <h2>Módulos de Big Data</h2>
+    <ul>
+      <li (click)="toggle('bd1')">Gestión de datos masivos</li>
+      <p class="descripcion" [style.display]="isOpen('bd1') ? 'block' : 'none'">
+        Bases de datos NoSQL (MongoDB, Cassandra) y arquitecturas de almacenamiento.
+      </p>
+
+      <li (click)="toggle('bd2')">Ecosistema Hadoop y Spark</li>
+      <p class="descripcion" [style.display]="isOpen('bd2') ? 'block' : 'none'">
+        Procesamiento distribuido con HDFS, MapReduce y Apache Spark para tiempo real.
+      </p>
+
+      <li (click)="toggle('bd3')">Minería de datos</li>
+      <p class="descripcion" [style.display]="isOpen('bd3') ? 'block' : 'none'">
+        Extracción de conocimiento, limpieza de datos y técnicas de clustering.
+      </p>
+
+      <li (click)="toggle('bd4')">Business Intelligence</li>
+      <p class="descripcion" [style.display]="isOpen('bd4') ? 'block' : 'none'">
+        Creación de dashboards, KPIs y reporting estratégico empresarial.
+      </p>
+
+      <li (click)="toggle('bd5')">Infraestructura en la Nube</li>
+      <p class="descripcion" [style.display]="isOpen('bd5') ? 'block' : 'none'">
+        Implementación de soluciones Big Data en AWS, Azure o Google Cloud.
+      </p>
+
+      <li (click)="toggle('bd6')">Visualización de Datos</li>
+      <p class="descripcion" [style.display]="isOpen('bd6') ? 'block' : 'none'">
+        Herramientas de visualización avanzada como Tableau, Power BI y librerías D3.js.
+      </p>
+    </ul>
+
+    <h2>Salidas Laborales</h2>
+    <ul>
+      <li>Data Engineer (Ingeniero de Datos)</li>
+      <li>Arquitecto de Big Data</li>
+      <li>Analista de Datos (Data Analyst)</li>
+      <li>Especialista en Business Intelligence</li>
+      <li>Administrador de Infraestructuras Cloud</li>
+    </ul>
+  </div>
+</div>
+
+<app-footer />

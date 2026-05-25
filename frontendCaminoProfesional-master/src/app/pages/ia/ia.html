@@ -1,0 +1,70 @@
+<app-header />
+
+<div class="elementosprincipales">
+  <section class="hero">
+    <video autoplay muted loop playsinline class="video-fondo">
+      <source src="videosPaginas/videoIA.mp4" type="video/mp4">
+    </video>
+    <div class="hero-content">
+      <h1>INTELIGENCIA ARTIFICIAL</h1>
+      <p>
+        La especialización en IA forma profesionales capaces de
+        desarrollar sistemas inteligentes, modelos predictivos y soluciones automatizadas.<br>
+        Prepárate para trabajar en <strong>Machine Learning, Deep Learning y procesamiento de lenguaje natural</strong>.
+      </p>
+      <a href="#contenidoIA" class="btn-hero">Explorar contenidos</a>
+    </div>
+  </section>
+
+  <div class="contenidoGrados" id="contenidoIA">
+    <h2>Especialización en Inteligencia Artificial</h2>
+    <p>
+      Esta especialización está diseñada para desarrolladores que buscan dominar
+      el diseño de algoritmos avanzados y la implementación de redes neuronales.
+    </p>
+
+    <h2>Módulos de IA</h2>
+    <ul>
+      <li (click)="toggle('ia1')">Modelos de Inteligencia Artificial</li>
+      <p class="descripcion" [style.display]="isOpen('ia1') ? 'block' : 'none'">
+        Introducción a los algoritmos de IA, lógica difusa y sistemas expertos.
+      </p>
+
+      <li (click)="toggle('ia2')">Sistemas de Aprendizaje Automático</li>
+      <p class="descripcion" [style.display]="isOpen('ia2') ? 'block' : 'none'">
+        Técnicas de Machine Learning supervisado, no supervisado y por refuerzo.
+      </p>
+
+      <li (click)="toggle('ia3')">Programación de IA (Python)</li>
+      <p class="descripcion" [style.display]="isOpen('ia3') ? 'block' : 'none'">
+        Uso de librerías como TensorFlow, PyTorch, Keras y Scikit-learn.
+      </p>
+
+      <li (click)="toggle('ia4')">Procesamiento de Lenguaje Natural</li>
+      <p class="descripcion" [style.display]="isOpen('ia4') ? 'block' : 'none'">
+        Desarrollo de chatbots, análisis de sentimientos y traducción automática.
+      </p>
+
+      <li (click)="toggle('ia5')">Visión Artificial</li>
+      <p class="descripcion" [style.display]="isOpen('ia5') ? 'block' : 'none'">
+        Reconocimiento de patrones en imágenes, detección de objetos y segmentación.
+      </p>
+
+      <li (click)="toggle('ia6')">Ética y Normativa de la IA</li>
+      <p class="descripcion" [style.display]="isOpen('ia6') ? 'block' : 'none'">
+        Impacto social, sesgos algorítmicos y marco legal de la inteligencia artificial.
+      </p>
+    </ul>
+
+    <h2>Salidas Laborales</h2>
+    <ul>
+      <li>Desarrollador de IA / Machine Learning Engineer</li>
+      <li>Científico de Datos Especializado en IA</li>
+      <li>Arquitecto de Sistemas Inteligentes</li>
+      <li>Consultor en Transformación Digital e IA</li>
+      <li>Ingeniero de Procesamiento de Lenguaje Natural</li>
+    </ul>
+  </div>
+</div>
+
+<app-footer />

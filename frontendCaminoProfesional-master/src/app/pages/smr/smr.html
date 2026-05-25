@@ -1,0 +1,89 @@
+<app-header />
+
+<div class="elementosprincipales">
+  <section class="hero">
+    <video autoplay muted loop playsinline class="video-fondo">
+      <source src="videosPaginas/videoSmr.mp4" type="video/mp4">
+    </video>
+    <div class="hero-content">
+      <h1>SMR</h1>
+      <p>
+        SMR o Sistemas Microinformáticos y Redes se centra en el hardware, las redes y el soporte técnico<br>
+        Prepárate para sectores como <strong>Ciberseguridad, Cloud y Bases de Datos</strong>.
+      </p>
+      <a href="#" class="btn-hero">Explorar especialidades</a>
+    </div>
+  </section>
+
+  <div class="contenidoGrados">
+    <h2>Sistemas Microinformáticos y Redes (SMR)</h2>
+    <p>
+      El titulado en SMR instala, configura y mantiene sistemas informáticos, ya sean equipos aislados o redes locales.
+    </p>
+    
+    <h3>Sistemas Microinformáticos y Redes (SMR)</h3>
+    <p class="introduccion">
+      SMR es el <strong>curso inicial de informática</strong>, ideal para empezar desde cero.
+      Aprenderás los fundamentos básicos de la informática: ordenadores, sistemas operativos,
+      redes y soporte técnico. Es perfecto para incorporarte al mundo de la informática y,
+      si quieres, continuar después con ciclos como <strong>ASIR, DAW o DAM</strong> 🚀
+    </p>
+
+    <h2>1º Sistemas Microinformáticos y Redes</h2>
+    <ul>
+      <li (click)="toggle('montaje')">Montaje y mantenimiento de equipos</li>
+      <p class="descripcion" [style.display]="isOpen('montaje') ? 'block' : 'none'">
+        Montar, reparar y mantener ordenadores y periféricos
+      </p>
+
+      <li (click)="toggle('sistemas1')">Sistemas operativos monopuesto</li>
+      <p class="descripcion" [style.display]="isOpen('sistemas1') ? 'block' : 'none'">
+        Instalación y uso básico de Windows y Linux
+      </p>
+
+      <li (click)="toggle('redes1')">Redes locales</li>
+      <p class="descripcion" [style.display]="isOpen('redes1') ? 'block' : 'none'">
+        Conectar equipos en red y entender cómo funciona Internet
+      </p>
+
+      <li (click)="toggle('ofimatica')">Aplicaciones ofimáticas</li>
+      <p class="descripcion" [style.display]="isOpen('ofimatica') ? 'block' : 'none'">
+        Uso profesional de Word, Excel, presentaciones y otras herramientas
+      </p>
+    </ul>
+
+    <br>
+    <h2>2º Sistemas Microinformáticos y Redes</h2>
+    <ul>
+      <li (click)="toggle('sistemas2')">Sistemas operativos en red</li>
+      <p class="descripcion" [style.display]="isOpen('sistemas2') ? 'block' : 'none'">
+        Administración básica de sistemas en red y usuarios
+      </p>
+
+      <li (click)="toggle('seguridad')">Seguridad informática</li>
+      <p class="descripcion" [style.display]="isOpen('seguridad') ? 'block' : 'none'">
+        Protección de equipos, datos y redes frente a amenazas
+      </p>
+
+      <li (click)="toggle('servicios')">Servicios en red</li>
+      <p class="descripcion" [style.display]="isOpen('servicios') ? 'block' : 'none'">
+        Configuración de servicios básicos como compartición de archivos y web
+      </p>
+
+      <li (click)="toggle('fct')">Formación en centros de trabajo (FCT)</li>
+      <p class="descripcion" [style.display]="isOpen('fct') ? 'block' : 'none'">
+        Prácticas en empresa para adquirir experiencia real
+      </p>
+    </ul>
+
+    <h2>Salidas Laborales</h2>
+    <ul>
+      <li>Operador de Sistemas</li>
+      <li>Técnico de Soporte Informático</li>
+      <li>Comercial de Microinformática</li>
+      <li>Técnico en Redes de Datos</li>
+    </ul>
+  </div>
+</div>
+
+<app-footer />

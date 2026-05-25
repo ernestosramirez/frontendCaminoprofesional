@@ -1,0 +1,70 @@
+<app-header />
+
+<div class="elementosprincipales">
+  <section class="hero">
+    <video autoplay muted loop playsinline class="video-fondo">
+      <source src="videosPaginas/videoCiberseguridad.mp4" type="video/mp4">
+    </video>
+    <div class="hero-content">
+      <h1>CIBERSEGURIDAD</h1>
+      <p>
+        La especialización en Ciberseguridad forma profesionales capaces de
+        proteger sistemas, redes y datos frente a ciberataques.<br>
+        Prepárate para trabajar en <strong>seguridad informática, hacking ético y análisis forense</strong>.
+      </p>
+      <a href="#contenidoCiber" class="btn-hero">Explorar contenidos</a>
+    </div>
+  </section>
+
+  <div class="contenidoGrados" id="contenidoCiber">
+    <h2>Especialización en Ciberseguridad</h2>
+    <p>
+      Esta especialización está orientada a titulados en informática que quieran
+      profundizar en la protección de sistemas y la detección de amenazas.
+    </p>
+
+    <h2>Módulos de Ciberseguridad</h2>
+    <ul>
+      <li (click)="toggle('seguridad1')">Fundamentos de ciberseguridad</li>
+      <p class="descripcion" [style.display]="isOpen('seguridad1') ? 'block' : 'none'">
+        Principios básicos de seguridad, amenazas, vulnerabilidades y ataques
+      </p>
+
+      <li (click)="toggle('redes1')">Seguridad en redes</li>
+      <p class="descripcion" [style.display]="isOpen('redes1') ? 'block' : 'none'">
+        Firewalls, VPN, IDS/IPS y protección de redes corporativas
+      </p>
+
+      <li (click)="toggle('sistemas1')">Seguridad en sistemas operativos</li>
+      <p class="descripcion" [style.display]="isOpen('sistemas1') ? 'block' : 'none'">
+        Hardening de sistemas Linux y Windows
+      </p>
+
+      <li (click)="toggle('hacking1')">Hacking ético y pentesting</li>
+      <p class="descripcion" [style.display]="isOpen('hacking1') ? 'block' : 'none'">
+        Análisis de vulnerabilidades y pruebas de penetración
+      </p>
+
+      <li (click)="toggle('forense1')">Análisis forense informático</li>
+      <p class="descripcion" [style.display]="isOpen('forense1') ? 'block' : 'none'">
+        Investigación de incidentes y recuperación de evidencias digitales
+      </p>
+
+      <li (click)="toggle('legal1')">Legislación y normativa</li>
+      <p class="descripcion" [style.display]="isOpen('legal1') ? 'block' : 'none'">
+        RGPD, protección de datos y normativa de seguridad
+      </p>
+    </ul>
+
+    <h2>Salidas Laborales</h2>
+    <ul>
+      <li>Analista de Ciberseguridad</li>
+      <li>Especialista en Seguridad Informática</li>
+      <li>Hacker Ético / Pentester</li>
+      <li>Administrador de Seguridad</li>
+      <li>Analista SOC</li>
+    </ul>
+  </div>
+</div>
+
+<app-footer />

@@ -1,0 +1,97 @@
+<app-header />
+
+<div class="elementosprincipales">
+  <section class="hero">
+    <video autoplay muted loop playsinline class="video-fondo">
+      <source src="videosPaginas/videoDAM.mp4" type="video/mp4">
+    </video>
+    <div class="hero-content">
+      <h1>DAM</h1>
+      <p>
+        DAM o Desarrollo de Aplicaciones Multiplataforma se especializa en aplicaciones nativas que se instalan directamente en dispositivos.<br>
+        Prepárate para sectores como <strong>Ciberseguridad, Cloud y Bases de Datos</strong>.
+      </p>
+      <a href="#" class="btn-hero">Explorar especialidades</a>
+    </div>
+  </section>
+
+  <div class="contenidoGrados">
+    <h2>Desarrollo de aplicaciones Multiplataforma (DAM)</h2>
+    <p>El titulado en DAM se encarga de la lógica y la interfaz de programas que no dependen necesariamente de un navegador para funcionar.</p>
+
+    <h2>1º Desarrollo de Aplicaciones Multiplataforma</h2>
+    <ul>
+      <li (click)="toggle('programacion1')">Programación</li>
+      <p class="descripcion" [style.display]="isOpen('programacion1') ? 'block' : 'none'">
+        Bases de la programación con Java: lógica, estructuras de control, POO y buenas prácticas
+      </p>
+      <li (click)="toggle('lenguajes1')">Lenguajes de marcas y sistemas de gestión de información</li>
+      <p class="descripcion" [style.display]="isOpen('lenguajes1') ? 'block' : 'none'">
+        HTML, CSS y XML para crear y estructurar contenido web de forma correcta
+      </p>
+      <li (click)="toggle('bbdd1')">Bases de datos</li>
+      <p class="descripcion" [style.display]="isOpen('bbdd1') ? 'block' : 'none'">
+        Diseño de bases de datos y consultas SQL para almacenar información de las aplicaciones
+      </p>
+      <li (click)="toggle('sistemas1')">Sistemas informáticos</li>
+      <p class="descripcion" [style.display]="isOpen('sistemas1') ? 'block' : 'none'">
+        Funcionamiento del hardware, sistemas operativos y nociones básicas de redes
+      </p>
+      <li (click)="toggle('entornos1')">Entornos de desarrollo</li>
+      <p class="descripcion" [style.display]="isOpen('entornos1') ? 'block' : 'none'">
+        Uso de IDEs, control de versiones con Git y trabajo en equipo
+      </p>
+      <li (click)="toggle('ipe1')">Itinerario personal para la Empleabilidad I</li>
+      <p class="descripcion" [style.display]="isOpen('ipe1') ? 'block' : 'none'">
+        Orientación laboral, habilidades profesionales y primeros pasos en el mundo laboral
+      </p>
+    </ul>
+
+    <br>
+    <h2>2º Desarrollo de Aplicaciones Multiplataforma</h2>
+    <ul>
+      <li (click)="toggle('programacion2')">Programación multimedia y dispositivos móviles</li>
+      <p class="descripcion" [style.display]="isOpen('programacion2') ? 'block' : 'none'">
+        Desarrollo de aplicaciones móviles y multimedia, principalmente con Android
+      </p>
+      <li (click)="toggle('interfaces2')">Desarrollo de interfaces</li>
+      <p class="descripcion" [style.display]="isOpen('interfaces2') ? 'block' : 'none'">
+        Diseño de interfaces gráficas usables y atractivas
+      </p>
+      <li (click)="toggle('acceso2')">Acceso a datos</li>
+      <p class="descripcion" [style.display]="isOpen('acceso2') ? 'block' : 'none'">
+        Conexión de las aplicaciones con bases de datos, ficheros y APIs externas
+      </p>
+      <li (click)="toggle('servicios2')">Programación de servicios y procesos</li>
+      <p class="descripcion" [style.display]="isOpen('servicios2') ? 'block' : 'none'">
+        Desarrollo de servicios, procesos y comunicaciones entre aplicaciones
+      </p>
+      <li (click)="toggle('sge2')">Sistemas de gestión empresarial</li>
+      <p class="descripcion" [style.display]="isOpen('sge2') ? 'block' : 'none'">
+        Uso y personalización de ERPs y CRMs para entornos empresariales
+      </p>
+      <li (click)="toggle('empresa2')">Empresa e iniciativa emprendedora</li>
+      <p class="descripcion" [style.display]="isOpen('empresa2') ? 'block' : 'none'">
+        Creación de empresas, ideas de negocio y nociones legales y económicas
+      </p>
+      <li (click)="toggle('proyecto2')">Proyecto de DAM</li>
+      <p class="descripcion" [style.display]="isOpen('proyecto2') ? 'block' : 'none'">
+        Desarrollo de un proyecto completo aplicando todo lo aprendido
+      </p>
+      <li (click)="toggle('fct2')">Formación en centros de trabajo (FCT)</li>
+      <p class="descripcion" [style.display]="isOpen('fct2') ? 'block' : 'none'">
+        Prácticas en empresa para adquirir experiencia real
+      </p>
+    </ul>
+
+    <h2>Salidas Laborales</h2>
+    <ul>
+      <li>FullStack Developer</li>
+      <li>Integración de APIs de IA en webs</li>
+      <li>BackEnd y FrontEnd</li>
+      <li>Especialista en Virtualización</li>
+    </ul>
+  </div>
+</div>
+
+<app-footer />
